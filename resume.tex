@@ -23,8 +23,11 @@
 
 \input{cv_templates/cv_13/structure.tex} % Include the file specifying document layout
 
-%----------------------------------------------------------------------------------------
+\usepackage{setspace}
 
+\singlespacing
+
+%----------------------------------------------------------------------------------------
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -33,23 +36,13 @@
 
 \title{Edward Pierzchalski} % Print the main header
 
-%------------------------------------------------
+\begin{tabbing}
+ \hspace{0.2\textwidth} \= \hspace{0.3\textwidth} \= \hspace{0.2\textwidth} \= \kill
+ {\bf Address} \> 521 Anzac Parade \> {\bf Phone} \> +61 404 664 375 \\
+ \> Kingsford NSW 2032 \> {\bf Email} \> \href{mailto:e.a.pierzchalski@gmail.com}{e.a.pierzchalski@gmail.com} \\
+ {\bf Date of Birth} \> $15^{th}$ July 1993 \\
+\end{tabbing}
 
-\parbox{0.5\textwidth}{ % First block
-\begin{tabbing} % Enables tabbing
-\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{\bf Address} \> 521 Anzac Parade\\ % Address line 1
-\> Kingsford NSW 2032 \\ % Address line 2
-{\bf Date of Birth} \> $15^{th}$ July 1993 \\ % Date of birth 
-\end{tabbing}}
-\hfill % Horizontal space between the two blocks
-\parbox{0.5\textwidth}{ % Second block
-\begin{tabbing} % Enables tabbing
-\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{\bf Phone} \> +61 404 664 375 \\
-{\bf Email} \> \href{mailto:e.a.pierzchalski@gmail.com}{e.a.pierzchalski@gmail.com}
-% Email address
-\end{tabbing}}
 
 %-------------------------------------------
 %       EDUCATION SECTION
@@ -60,27 +53,28 @@
 \tabbedblock{
 \bf{2011 -} \> BSc Mathematics, BSc Computer Science - 
 \href{https://www.unsw.edu.au/}{University of New South Wales} \\
-\bf{Current}\>Distinction average mark (78). Expected graduation in June 2016.\\[5pt]
+\bf{Current}\>Distinction average mark. Expected graduation in June 2016.\\[5pt]
 \>\begin{minipage}{\smallertextwidth}
-\setlength{\parskip}{3pt}
-\vspace{3pt}
-\textbf{\color{slateblue} \large Awards}
+\setlength{\parskip}{5pt}
+\vspace{5pt}
+\subsection{Awards}
 
 \textit{Google Third Year Prize}, 2013
 
 \textit{Computer Science and Engineering Third Year Undergraduate Performance Prize (4th in year)}, 2013
 
-\vspace{5pt}
+\vspace{-5pt}
+\subsection{Notable Projects}
+\vspace{-5pt}
+\begin{description}
 
-\textbf{\color{slateblue} \large Notable Projects}
+\item[\textbf{Concepts in Programming Languages:}] Implemented a simplified Haskell-esque language, including extensions such as type inference, recursive bindings, and handling user-provided type signatures. Learnt many important concepts for understanding and modelling the semantics of programs and programming languages. Ranked $1^{st}$ in the course.
 
-\vspace{3pt}
+\item[\textbf{Advanced Verification:}] Verified a small C program using Isabelle, a theorem prover. Gained insight into modern software verification tools and techniques, especially proof automation. Ranked $1^{st}$ in the course.
 
-\textbf{\color{slateblue} Concepts in Programming Languages:} Implemented a simplified Haskell-esque language, including extensions such as type inference, recursive bindings, and handling user-provided type signatures. Learnt many important concepts for understanding and modelling the semantics of programs and programming languages. Ranked $1^{st}$ in the course.
+\item[\textbf{Systems Capacity Planning:}] Constructed a Monte Carlo simulation to investigate the effects of resource network structure on performance. Achieved a high distinction in the course.
 
-\textbf{\color{slateblue} Advanced Verification:} Verified a small C program using Isabelle, a theorem prover. Gained insight into modern verification tools and techniques. Ranked $1^{st}$ in the course.
-
-\textbf{\color{slateblue} Computer Graphics:} Wrote 
+\end{description}
 
 \end{minipage}
 }
@@ -92,28 +86,33 @@
 \section{Employment}
 
 \job
-{Sep 2011 -}{Present}
-{Lehman Brothers, 1234 Mario Park, San Francisco, CA, United States}
-{http://www.lehmanbrothers.com}
-{Senior Developer / Technical Team Lead}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolor sed sagittis. Cras justo lorem, volutpat mattis lacus vel, consequat aliquam quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.\\
-\rule{0mm}{5mm}\textbf{Technologies:} Ruby on Rails 2.3, Amazon EC2, NoSQL data stores, memcached, collaborative matching, Facebook Graph API.}
+{Mar 2014 -}{Present}
+{National ICT Australia}
+{http://www.nicta.com.au/}
+{Software Intern}
+{Engineer on the \textit{Perentie} team, an experimental software verification tool written in Scala. Participated in SV COMP 2015, a software verification competition. \textit{Perentie} ranked third in its category after less than a year of development.
 
-%-------------------------------------------
+\begin{itemize}
+ \item{Designed intermediate languages to represent and simplify C program semantics}
+ \item{Helped design and implement an embedded domain-specific language for interacting with SMT solvers}
+ \item{Worked on novel verification algorithms for inter-procedural analysis with an active researcher in the field}
+\end{itemize}
+}
+
+\newpage
 
 \job
-{Oct 2009 -}{Sep 2010}
-{Initech Inc., Otis St, CA 94025, United States}
-{http://www.initech.com}
-{Analyst}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolor:
+{Dec 2013 -}{Sep 2014}
+{Tomorrowland Enterprises}
+{}
+{Software Engineer}
+{Worked with FoodBank Australia to produce a real-time vehicle logistics optimisation tool, written in Scala.
 
-\begin{itemize-noindent}
-\item{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals.)}
-\item{Managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}
-\end{itemize-noindent}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolor sed sagittis.}
+\begin{itemize} 
+ \item{Implemented a failure-resistant `micro-service' to responsively handle events while maintaining efficient vehicle routing.}
+ \item{Helped architect the project with a focus on safety by using language features to statically check business logic assumptions} 
+\end{itemize}
+}
 
 %-------------------------------------------
 %       IT/COMPUTING SKILLS SECTION
@@ -121,56 +120,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolo
 
 \section{Software Engineering Skills}
 
-\skillgroup{Programming Languages}
-{
-\textit{Ruby} - MRI 1.8.7, 1.9.2\\
-\textit{ASP.NET, C\#, VB.NET}\\
-\textit{PHP}\\
-\textit{Java/Scala}
-}
+\begin{itemize}
+\item{Experienced in developing software in small to medium teams}
 
-%-------------------------------------------
-\skillgroup{Web Development}
-{
-\textit{HTML5, CSS3/SASS, JavaScript/CoffeeScript/jQuery}\\
-\textit{Ruby on Rails v3.1}\\
-\textit{Test:Unit, RSpec, Cucumber, Selenium} - automated testing frameworks\\
-\textit{Apache/Nginx Web Servers}\\
-}
+\item{Strong background on functional programming, language design and semantics, and type theory}
 
-%-------------------------------------------
-\skillgroup{Miscellaneous}
-{
-\textit{Microsoft SQL Server 2000/2005} - database architecture and administration\\
-\textit{Transact-SQL} - data definition and manipulation\\
-\textit{SQL Profiler} - performance tuning and debugging\\
-\textit{MySQL Server}\\
-\textit{CVS, DARCS, git} - source version control
-}
+\item{\textbf{Experienced} in Scala, Haskell, and Java}
 
-%-------------------------------------------
-%       REFEREE SECTION
-%-------------------------------------------
+\item{\textbf{Proficient} in Python, Bash, C, Erlang, Rust, and \LaTeX}
 
-\section{Referees}
-
-\parbox{0.5\textwidth}{ % First block
-\begin{tabbing}
-\hspace{2.75cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{\bf Name} \> Bill Lumbergh \\ % Referee name
-{\bf Company} \> Initech Inc. \\ % Referee company
-{\bf Position} \> Vice President \\ % Referee job title 
-{\bf Contact} \> \href{mailto:bill@initech.com}{bill@initech.com} % Referee contact information
-\end{tabbing}}
-\hfill % Horizontal space between the two blocks
-\parbox{0.5\textwidth}{ % Second block
-\begin{tabbing}
-\hspace{2.75cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{\bf Name} \> Michael "Big Mike" Tucker\\ % Referee name
-{\bf Company} \> Burbank Buy More \\ % Referee company
-{\bf Position} \> Store Manager \\ % Referee job title 
-{\bf Contact} \> \href{mailto:mike@buymore.com}{mike@buymore.com} % Referee contact information
-\end{tabbing}}
+\end{itemize}
 
 %-------------------------------------------
 
