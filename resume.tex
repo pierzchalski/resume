@@ -1,154 +1,138 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wilson Resume/CV
-% XeLaTeX Template
-% Version 1.0 (22/1/2015)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Howard Wilson (https://github.com/watsonbox/cv_template_2004) with
-% extensive modifications by Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage[a4paper, left=2.0cm, right=2.0cm, top=2.0cm, bottom=2.5cm]{geometry}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage[super]{nth}
+\usepackage[backend=biber, style=authortitle, maxbibnames=99]{biblatex}
 
-%----------------------------------------------------------------------------------------
-%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\definecolor{darkblue}{rgb}{0.50, 0.50, 0.66}
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{1cm}
+\def \columnseprulecolor{\color{darkblue}}
+\pagenumbering{gobble}
+\addbibresource{publications.bib}
 
-\documentclass[10pt]{article} % Default font size
+\title{Edward Pierzchalski}
+\author{Email: \href{mailto:e.a.pierzchalski@gmail.com}{e.a.pierzchalski@gmail.com} \and Mobile: +614 04 664 375}
+\date{}
+\posttitle{\par\end{center}}
+\setlength{\droptitle}{-1.5cm}
 
-\input{cv_templates/cv_13/structure.tex} % Include the file specifying document layout
-
-\usepackage{setspace}
-\usepackage{calc}
-
-\singlespacing
-\setlength{\parskip}{5pt}
-
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%       NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+\maketitle
+\vspace{-1cm}
 
-\title{Edward Pierzchalski} % Print the main header
+\begin{multicols*}{2}
 
-\begin{tabbing}
- \hspace{2cm} \= \hspace{6cm} \= \hspace{2cm} \= \kill
- {\bf Phone} \> +61 404 664 375 \> 
- {\bf Email} \> \href{mailto:e.a.pierzchalski@gmail.com}{e.a.pierzchalski@gmail.com} \\\\
-\end{tabbing}
-\vspace{-40pt}
+\section*{Education}
 
-%-------------------------------------------
-%       EDUCATION SECTION
-%-------------------------------------------
+\subsection*{University of New South Wales}
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt]
+ \item {Bachelor of Science (Mathematics), graduated February 2016}
+ \item {Bachelor of Science (Computer Science)} 
+ \item {Pursuing Honors in Computer Science, expected graduation February 2017}
+\end{itemize}
 
-\section{Education}
+\subsection*{Awards}
 
-\tabbedblock{
-\bf{2011 -} \> BSc Mathematics, BSc Computer Science - 
-\href{https://www.unsw.edu.au/}{University of New South Wales} \\
-\bf{Current}\>\\
-\>\begin{minipage}{\smallertextwidth}
-\vspace{-10pt}
-Distinction average mark. Currently persuing Honours, First Class. Expected graduation in November 2016.
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt]
+ \item {Google Third Year Prize}
+ \item {CSE Undergraduate Performance Prize Year 3, 4th Place}
+\end{itemize}
 
-\subsection{Awards}
+\subsection*{Notable Work}
 
-\textit{Google Third Year Prize}, 2013
-
-\textit{Computer Science and Engineering Third Year Undergraduate Performance Prize (4th in year)}, 2013
-
-\subsection{Notable Projects}
-
-\begin{description} \itemsep-1pt
-
-\item[\textbf{Concepts in Programming Languages:}] Implemented a simplified Haskell-esque language, including extensions such as type inference, recursive bindings, and handling user-provided type signatures. Learnt many important concepts for understanding and modelling the semantics of programs and programming languages. Ranked $1^{st}$ in the course.
-
-\item[\textbf{Advanced Verification:}] Verified a small C program using Isabelle, a theorem prover. Gained insight into modern software verification tools and techniques, especially proof automation. Ranked $1^{st}$ in the course.
-
-\item[\textbf{Advanced Operating Systems:}] Wrote a small OS on top of the SeL4 microkernel as part of a pair project. Major contributions included asynchronous file I/O and advanced memory management. Programmed using Rust, a sophisticated systems language developed by Mozilla. Developed skills in low-level design and programming in a concurrent context. Achieved Distinction mark.
-
+\begin{description}[leftmargin=12pt, itemsep=-2pt]
+ \item[Advanced Algorithmic Verification:] {
+  Gained experience using Isabelle, an interactive theorem prover. Formally verified a simple C program. Ranked \nth{1} in the course.
+ }
+ \item[Concepts of Programming Languages:] {
+  Implemented a small Haskell variant, including typechecker. Ranked \nth{1} in the course.
+ }
+ \item[Advanced Operating Systems:] {
+  Wrote a kernel on top of the SeL4 microkernel. Written in Rust, a new systems programming language.
+ }
+ \item[Computer Graphics:] {
+  Produced an interactive graphical demo including modern shaders. Achieved a High Distinction.
+ }
+ \item[Systems Capacity Planning:] {
+  Applied Monte-Carlo simulation techniques to model a constrained-capacity network. Achieved a High Distinction.
+ }
+ 
 \end{description}
 
-\end{minipage}
-}
+\section*{Publications}
 
-%-------------------------------------------
-%       EMPLOYMENT HISTORY SECTION
-%-------------------------------------------
+\nocite{*}
+\printbibliography[heading=none]
 
-\section{Employment}
+\vfill
 
-\job
-{Nov 2015 -}{Feb 2016}
-{Google Australia}
-{}
-{Software Engineering Intern}
-{yolo}
+\section*{Employment History}
 
-\newpage
+\subsection*{Data61}
+\textit{Research assistant, July 2014 to November 2015, February 2016 to present}
 
-\job
-{Mar 2014 -}{Nov 2015}
-{National ICT Australia}
-{http://www.nicta.com.au/}
-{Software Engineering Intern (Mar 2014 - Mar 2015)}
-{Engineer on the \textit{Perentie} team, an experimental software verification tool written in Scala. Participated in SV COMP 2015, a software verification competition. \textit{Perentie} ranked third in its category after less than a year of development.
-
-\begin{itemize} \itemsep-1pt
- \item{Designed intermediate languages to represent and simplify C program semantics.}
- \item{Helped design and implement an embedded domain-specific language for interacting with SMT solvers.}
- \item{Worked on novel verification algorithms for inter-procedural analysis with an active researcher in the field.}
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt, topsep=-4pt]
+ \item {
+  Independently investigating formal semantics of concurrent security-sensitive programs, with a focus on value-dependent classification.
+ }
+ \item {
+  Developed judgement systems to help automate analysis of security properties in a simple imperative language.
+ }
+ \item {
+  Verified properties of judgement system using Isabelle, a theorem prover.
+ }
 \end{itemize}
 
-\textit{Research Intern (Mar 2015 - Nov 2015)} \vspace{2mm}
+\subsection*{Google Australia}
+\textit{Engineering intern, November 2015 to February 2016}
 
-Independently investigated formal semantics of concurrent security-sensitive programs with value-dependent lassification.
-
-\begin{itemize} \itemsep-1pt
- \item{Developed judgement systems to help automate analysis of such programs in a toy language.}
- \item{Verified properties of judgement system using Isabelle, a theorem prover.} 
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt, topsep=-4pt]
+ \item {
+  Extended collection of public user G+ post data, applied indexing and text salience techniques to extract popular content. Written in Go.
+ }
+ \item {
+  Demonstrated ability to communicate and co-ordinate with offsite teams, coding and execution skills, and ability to familiarize myself with internal tools.
+ }
 \end{itemize}
 
-}
+\subsection*{NICTA}
+\textit{Software engineering intern, March 2013 to July 2014}
 
-\job
-{Dec 2013 -}{Sep 2014}
-{Tomorrowland Enterprises}
-{}
-{Software Engineer}
-{Worked with FoodBank Australia to produce a real-time vehicle logistics optimisation tool, written in Scala.
-
-\begin{itemize} \itemsep-1pt
- \item{Implemented a failure-resistant `micro-service' to responsively handle events while maintaining efficient vehicle routing.}
- \item{Helped architect the project with a focus on safety by using language features to statically check business logic assumptions} 
-\end{itemize}
-}
-
-%-------------------------------------------
-%       IT/COMPUTING SKILLS SECTION
-%-------------------------------------------
-
-\section{Software Engineering Skills}
-
-\begin{itemize} \itemsep-1pt
-\item{Experienced in developing software in small to medium teams}
-
-\item{Strong background on functional programming, language design and semantics, and type theory}
-
-\item{\textbf{Experienced} in Rust, Go, Scala, Haskell, and Java}
-
-\item{\textbf{Proficient} in Python, Bash, C, Erlang, Rust, and \LaTeX}
-
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt, topsep=-4pt]
+ \item {
+  Engineer on the \textit{Perentie} team, an experimental software verification tool written in Scala. Participated in SV COMP 2015, a software verification competition. \textit{Perentie} ranked third in its category after less than a year of development.
+ }
+ \item {
+  Designed intermediate languages to represent and simplify C program semantics.
+ }
+ \item {
+  Helped design and implement an embedded domain-specific language for interacting with SMT solvers.
+ }
 \end{itemize}
 
-%-------------------------------------------
+\section*{Skills}
 
+\begin{itemize}[leftmargin=12pt, itemsep=-2pt, topsep=-4pt]
+ \item {
+  Experienced in research and software development, independently or in small to medium teams.
+ }
+ \item {
+  Strong background on functional programming, language design and semantics, and type theory.
+ }
+ \item {
+  Proficient in Rust, C, Haskell, Python, \LaTeX, and Scala.
+ }
+\end{itemize}
+
+\end{multicols*}
+ 
 \end{document}
