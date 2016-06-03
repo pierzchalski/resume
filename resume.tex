@@ -9,18 +9,19 @@
 \usepackage{titling}
 \usepackage{enumitem}
 \usepackage[super]{nth}
-\usepackage[backend=biber, style=authortitle, maxbibnames=99]{biblatex}
+\usepackage[backend=biber, style=authortitle]{biblatex}
 
 \definecolor{darkblue}{rgb}{0.50, 0.50, 0.66}
 \setlength{\columnseprule}{1pt}
 \setlength{\columnsep}{1cm}
 \def \columnseprulecolor{\color{darkblue}}
 \pagenumbering{gobble}
+
 \addbibresource{publications.bib}
 
 \title{Edward Pierzchalski}
 \author{
-  Email: \href{mailto:e.a.pierzchalski@gmail.com}{e.a.pierzchalski@gmail.com} 
+  Email: \href{mailto:edward@pierzchalski.org}{edward@pierzchalski.org} 
   \and Mobile: +614 04 664 375
   \and Github: \href{https://github.com/pierzchalski}{pierzchalski}}
 \date{}
@@ -71,10 +72,8 @@
  
 \end{description}
 
-\section*{Publications}
-
 \nocite{*}
-\printbibliography[heading=none]
+\printbibliography[title=Publications]
 
 \vfill
 
