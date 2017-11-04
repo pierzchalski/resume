@@ -124,7 +124,7 @@
   % recompute lengths (in case we are switching from letter to resume, or vice versa)
   \recomputeletterlengths%
   % ensure footer with personal information
-  %\makeletterfooter%
+  \makeletterfooter%
   % recipient block
   \begin{minipage}[t]{.5\textwidth}
     \raggedright%
@@ -151,7 +151,7 @@
         \centering%
         \addressfont\color{color2}%
         \vspace{-\baselineskip}% to cancel out the extra vertical space taken by the name (below) and ensure perfect alignment of letter and cv footers
-        \strut{\bfseries\upshape\@firstname~\@lastname}\\% the \strut is required to ensure the line is exactly \baselineskip tall
+        %\strut{\bfseries\upshape\@firstname~\@lastname}\\% the \strut is required to ensure the line is exactly \baselineskip tall
         \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
           \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
           \ifthenelse{\equal{\@addresscountry}{}}{}{\addtofooter[~--~]{\@addresscountry}}%
@@ -166,7 +166,7 @@
   \pagestyle{plain}}
 
 \renewcommand*{\makeletterclosing}{
-  \@closing\\[3em]%
+  \@closing\\[2em]%
   {\bfseries\@firstname~\@lastname}%
   \ifthenelse{\isundefined{\@enclosure}}{}{%
     \\%

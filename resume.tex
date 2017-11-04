@@ -3,7 +3,7 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage{multicol}
-\usepackage[a4paper, left=2.0cm, right=2.0cm, top=2.0cm, bottom=2.5cm]{geometry}
+\usepackage[a4paper, left=2.0cm, right=2.0cm, top=2.0cm, bottom=2.0cm]{geometry}
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage{titling}
@@ -20,10 +20,10 @@
 \addbibresource{publications.bib}
 
 \title{Edward Pierzchalski}
-\author{
-  Email: \href{mailto:edward@pierzchalski.org}{edward@pierzchalski.org}
-  \and Mobile: +614 04 664 375
-  \and Github: \href{https://github.com/pierzchalski}{pierzchalski}}
+%\author{
+%  Email: \href{mailto:edward@pierzchalski.org}{edward@pierzchalski.org}
+%  \and Mobile: +614 04 664 375
+%  \and Github: \href{https://github.com/pierzchalski}{pierzchalski}}
 \date{}
 \posttitle{\par\end{center}}
 \setlength{\droptitle}{-1.5cm}
@@ -32,7 +32,7 @@
 \begin{document}
 
 \maketitle
-\vspace{-1cm}
+\vspace{-5em}
 
 \begin{multicols*}{2}
 
@@ -119,7 +119,6 @@
  \item[Advanced Operating Systems:] {
   Wrote a kernel on top of the SeL4 microkernel, written in Rust.
  }
-
 \end{description}
 
 \section*{Skills}
@@ -138,6 +137,19 @@
 
 \nocite{*}
 \printbibliography[title=Publications]
+
+\section*{References}
+
+\begin{description}[leftmargin=12pt, itemsep=-2pt]
+ \item[Dr. Toby Murray:] {
+  Undergraduate thesis supervisor, research lead. \\
+  Email: \href{mailto:toby.murray@unimelb.edu.au}{toby.murray@unimelb.edu.au}.
+ }
+ \item[Richard Vagg:] {
+  Principle Engineer at Cog Systems.
+  Email: \href{mailto:richard@cog.systems}{richard@cog.systems}.
+ }
+\end{description}
 
 \end{multicols*}
 
