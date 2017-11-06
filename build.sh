@@ -15,3 +15,11 @@
         -latex="lualatex %O --shell-escape %S" \
         cover_letter.tex
 )
+
+(
+    pdfunite \
+        cover_letter/cover_letter.pdf \
+        cv/resume.pdf \
+        transcript.pdf \
+        out.pdf
+)
