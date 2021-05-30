@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=6.9cm,marginparwidth=5cm,marginparsep=0.9cm,top=1.25cm,bottom=1.25cm}
+
+\lefthyphenmin=100
+\tolerance=1000
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage{hyperref}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{DarkGrey}{HTML}{333333}
+\colorlet{heading}{FireBrick}
+\colorlet{accent}{FireBrick}
+\colorlet{emphasis}{black}
+\colorlet{body}{DarkGrey}
+\colorlet{link}{FireBrick}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=link,
+    filecolor=link,      
+    urlcolor=link,
+}
+\urlstyle{same}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Edward Pierzchalski}
+\tagline{Software Engineering Pragmatist and Formal Methods Enthusiast}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{e.a.pierzchalski@gmail.com}
+  \phone{+61 404 664 375}
+  \location{Sydney, Australia}
+
+  \linkedin{linkedin.com/in/edward-pierzchalski}
+  \github{github.com/pierzchalski}
+
+%    web: www.techchain.me
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Proof Engineer}{CSIRO's Data61}{July 2018 -- Ongoing}{}
+\begin{itemize}
+\item Worked in small teams on long-running projects (2-8 people, 6+ months) on a large codebase: \href{https://github.com/seL4/l4v}{L4V} contains over one million lines of proof code, including proof automation written in SML.
+\item Developed tools to detect and remove redundant proof code, saving one month of FTE development time so far.
+\item Smoothed the onboarding experience by improving the initial user machine environment, writing up documentation and tutorials on Isabelle internals, and updating our internal setup instructions.
+\item Produced various quality-of-life enhancements for fellow proof engineers, by specialising in the arcane internals of the Isabelle theorem prover.
+\item Ported the SIMPL-GraphLang automatic semantics refinement tool from ARM to RISCV. This is a critical component in the verification of binary functional correctness.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer}{Cog Systems}{January 2017 -- June 2018}{}
+\begin{itemize}
+\item Worked in small, rapidly changing teams (3-7 people, 1-4 month stretches) in large codebases: \texttt{wpa\_supplicant}, Android's initialisation processes, the OKL4 hypervisor.
+\item Ported the OKL4 hypervisor to the imx8MQ platform, up to the point of booting a native Linux guest. Rapidly learnt how to use JTAG and Lauterbach in the process.
+\item Wrangled our remote, IP-siloed git repositories using local remotes, after noticing project inefficiencies from diverging histories.
+\item Designed and implemented OKL4 and linux drivers and tooling, to test all of physical memory for sentinel values in a hypervised system.
+\item Pushed for and investigated migrating Cog's custom build system over to CMake.
+\item Wrote a tool to extract data from device tree files into an internal specification format.
+\item Modified WPA Supplicant to reject legal but insecure CA certificates, as part of a project to produce a FIPS-140 certified phone.
+\item Designed an isolated keystore component for disk encryption, and modified the Android init process to use it.
+\end{itemize}
+
+\divider
+
+\cvevent{Research Assistant}{CSIRO's Data61}{July 2014 -- November 2015; February 2016 -- November 2016}{}
+\begin{itemize}
+\item Independently investigated formal semantics for concurrent, security-sensitive programs, focusing on data-value-dependent classification, then proving properties using Isabelle.
+\end{itemize}
+
+\vspace{3mm}
+
+\cvevent{Software Engineering Intern}{Google Australia}{November 2015 -- February 2016}{}
+\begin{itemize}
+\item Worked on extracting and indexing popular content from Google+ text posts, largely independently within a small team of 6 people.
+%\item Communicated and coordinated with offsite teams, and demonstrated an ability to familiarize myself with internal tools.
+\end{itemize}
+
+\vspace{3mm}
+
+\cvevent{Software Engineering Intern}{FoodBank Local}{November 2013 -- February 2014}{}
+\begin{itemize}
+\item Integrated novel logistics optimisation software as part of a startup incubation collaboration with NICTA, while rapidly upskilling in Scala. Worked tightly with a small team of 6 people.
+
+\end{itemize}
+
+\clearpage
+
+\end{document}
